@@ -9,6 +9,9 @@
 
   <?php // Load our CSS ?>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+  
+  <?php // Load Fonts ?>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Raleway:700,100' rel='stylesheet' type='text/css'>
 
   <?php wp_head(); ?>
 </head>
@@ -18,16 +21,17 @@
 
 <header>
   <div class="container">
+    <?php wp_nav_menu( array(
+      'container' => false,
+      'theme_locations' => 'primary'
+    )); ?>
+    
     <h1>
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
         <?php bloginfo( 'name' ); ?>
       </a>
     </h1>
 
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_locations' => 'primary'
-    )); ?>
   </div> <!-- /.container -->
 </header><!--/.header-->
 
