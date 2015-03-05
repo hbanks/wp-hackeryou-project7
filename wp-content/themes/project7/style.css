@@ -191,7 +191,7 @@ body {
   float: left;
   display: inline-block;
   float: left;
-  width: 75%;
+  width: 100%;
   padding-left: 1.04167%;
   padding-right: 1.04167%; }
 
@@ -279,14 +279,15 @@ h1 {
 .sidebar {
   display: inline-block;
   float: left;
-  width: 25%;
+  width: 100%;
   padding-left: 1.04167%;
   padding-right: 1.04167%;
   float: left; }
 
 .sidebar ul {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  width: 100%; }
 
 .sidebar ul li {
   list-style: none; }
@@ -313,7 +314,7 @@ ul.menu {
 ul.menu li.current-menu-item a {
   color: #c4c0b7; }
 
-.post {
+.posts {
   display: inline-block;
   float: left;
   width: 33.33333%;
@@ -321,12 +322,12 @@ ul.menu li.current-menu-item a {
   padding-right: 1.04167%;
   padding: 5px; }
 
-.post a {
+.posts a {
   font-family: 'Raleway', sans-serif;
   font-size: 12px;
   color: black;
   letter-spacing: 0; }
-  .post a:hover {
+  .posts a:hover {
     color: #c4c0b7; }
 
 .postThumbnailContent {
@@ -344,6 +345,43 @@ ul.menu li.current-menu-item a {
 a[rel~="category"] {
   font-style: italic;
   font-weight: 100; }
+
+.singleContainer {
+  max-width: 900px; }
+
+.singleContent.content {
+  display: inline-block;
+  float: left;
+  width: 83.33333%;
+  padding-left: 1.04167%;
+  padding-right: 1.04167%;
+  margin: 0 auto; }
+  .singleContent.content h1 {
+    text-align: left;
+    padding-left: 20px; }
+  .singleContent.content .entry-meta {
+    padding-left: 20px;
+    font-family: 'Droid Serif', serif; }
+
+.entry-content p {
+  padding: 0 25px; }
+
+.entry-content img {
+  padding: 0;
+  width: 100%; }
+
+.singleSidebar {
+  display: inline-block;
+  float: left;
+  width: 16.66667%;
+  padding-left: 1.04167%;
+  padding-right: 1.04167%; }
+
+.navigation {
+  clear: both; }
+
+.comments-area {
+  clear: both; }
 
 /* =============================================================================
                    Comment Styling

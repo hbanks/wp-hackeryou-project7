@@ -74,8 +74,7 @@ body {
   float:left;
   // width:65%;
   // margin-right: 5%;
-  @include column(9);
-
+  @include column(12);
 }
 
 .row {
@@ -173,12 +172,13 @@ h1 {
    ========================================================================== */
 .sidebar {
   // width:20%;
-  @include column(3);
+  @include column(12);
   float:left;
 }
   .sidebar ul {
     margin:0;
     padding:0;
+    width: 100%;
   }
     .sidebar ul li {
       list-style: none;
@@ -215,12 +215,12 @@ h1 {
 //==============================================================================
 // Post Styles
 //==============================================================================
-.post {
+.posts {
   @include column(4);
   padding: 5px;
 }
 
-.post a {
+.posts a {
   font-family: $headerFont;
   // font-weight: $headerFontWeight;
   font-size: 12px;
@@ -256,6 +256,45 @@ a[rel~="category"] {
 //==============================================================================
 // Single Page Styles
 //==============================================================================
+
+.singleContainer {
+  max-width: 900px;
+}
+
+.singleContent.content {
+  @include column(10);
+  margin: 0 auto;
+  h1 {
+    text-align: left;
+    padding-left: 20px;
+  }
+  .entry-meta {
+    padding-left: 20px;
+    font-family: $bodyFont;
+  }
+}
+
+.entry-content p {
+  padding: 0 25px;
+}
+
+.entry-content img {
+  padding: 0;
+  width: 100%;
+}
+
+
+.singleSidebar {
+  @include column(2);
+}
+
+.navigation {
+  clear: both; 
+}
+.comments-area {
+  clear: both;
+}
+
 
 
 /* =============================================================================
