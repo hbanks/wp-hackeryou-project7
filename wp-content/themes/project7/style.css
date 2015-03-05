@@ -6,6 +6,16 @@ Version: 1.0
 Author: Heather Banks
 Author URI: http://hackeryou.com
 */
+body {
+  width: 100%;
+  *zoom: 1; }
+  body:before, body:after {
+    display: table;
+    content: '';
+    line-height: 0; }
+  body:after {
+    clear: both; }
+
 /* =============================================================================
                    Normalize, border box and clearfix
    ========================================================================== */
@@ -179,8 +189,23 @@ body {
 
 .content {
   float: left;
-  width: 65%;
-  margin-right: 5%; }
+  display: inline-block;
+  float: left;
+  width: 75%;
+  padding-left: 1.04167%;
+  padding-right: 1.04167%; }
+
+.row {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  *zoom: 1; }
+  .row:before, .row:after {
+    display: table;
+    content: '';
+    line-height: 0; }
+  .row:after {
+    clear: both; }
 
 .full {
   width: 100%; }
@@ -193,6 +218,9 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px; }
+
+a.current-menu-item {
+  color: #c4c0b7; }
 
 a:hover {
   color: #D424B1; }
@@ -242,11 +270,18 @@ pre {
   border-radius: 4px;
   border: 1px solid #ccc; }
 
+h1 {
+  text-align: center; }
+
 /* =============================================================================
                    Sidebar
    ========================================================================== */
 .sidebar {
-  width: 20%;
+  display: inline-block;
+  float: left;
+  width: 25%;
+  padding-left: 1.04167%;
+  padding-right: 1.04167%;
   float: left; }
 
 .sidebar ul {
@@ -255,12 +290,6 @@ pre {
 
 .sidebar ul li {
   list-style: none; }
-
-/* =============================================================================
-                   Footer
-   ========================================================================== */
-footer {
-  clear: both; }
 
 /* =============================================================================
                    Navigation
@@ -279,10 +308,41 @@ ul.menu {
       padding: 10px;
       color: black; }
       ul.menu li a:hover {
-        color: #f2f1ef; }
+        color: #c4c0b7; }
+
+ul.menu li.current-menu-item a {
+  color: #c4c0b7; }
+
+.post {
+  display: inline-block;
+  float: left;
+  width: 33.33333%;
+  padding-left: 1.04167%;
+  padding-right: 1.04167%;
+  padding: 5px; }
 
 .post a {
   font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  color: black;
+  letter-spacing: 0; }
+  .post a:hover {
+    color: #c4c0b7; }
+
+.postThumbnailContent {
+  background: #f2f1ef;
+  text-align: center; }
+  .postThumbnailContent img {
+    width: 100%; }
+  .postThumbnailContent .entry-title {
+    padding: 0 10px;
+    padding-bottom: 30px; }
+    .postThumbnailContent .entry-title a {
+      width: 100%;
+      display: inline-block; }
+
+a[rel~="category"] {
+  font-style: italic;
   font-weight: 100; }
 
 /* =============================================================================
@@ -456,3 +516,9 @@ p.form-allowed-tags, .nocomments {
 
 #respond p, #comments-list ul #respond {
   margin: 0; }
+
+/* =============================================================================
+                   Footer
+   ========================================================================== */
+footer {
+  clear: both; }
