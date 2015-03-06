@@ -46,8 +46,9 @@ img.alignright    { padding-left: 5px; }
 // Variables 
 //==========
 
-$bodyFontColour: ;
+$fontColour: #444038;;
 $linkColour: rgb(242, 241, 239);
+
 
 $backgroundColour: rgb(242, 241, 239);
 
@@ -60,6 +61,11 @@ $navFontWeight: 700;
 /* =============================================================================
                    Default Styling
    ========================================================================== */
+
+body, ul, h1, h2, h3, a {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   color:#333;
@@ -87,7 +93,7 @@ body {
 
 /* links */
 a {
-  color:#BA209B;
+  color: $fontColour;
   text-decoration: none;
   font-family: $headerFont;
   font-weight: $navFontWeight;
@@ -100,7 +106,7 @@ a.current-menu-item {
 }
 
 a:hover {
-  color: #D424B1;
+  color: darken($linkColour, 20%);
 }
 
 
@@ -115,6 +121,7 @@ h2 {
 p {
   line-height: 1.5;
   font-family: $bodyFont;
+  color: $fontColour;
 }
 
 /*blockquotes*/
@@ -165,6 +172,7 @@ pre {
 
 h1 {
   text-align: center;
+  padding: 50px 0;
 }
 
 /* =============================================================================
@@ -193,7 +201,8 @@ h1 {
     padding:10px;
     text-align: center;
     width: 100%;
-    border-bottom: 1px solid lightgrey;
+    // border-bottom: 1px solid lightgrey;
+    background: $linkColour;
     li {
       display:inline;
       margin-right: 10px;
@@ -225,7 +234,7 @@ h1 {
   // font-weight: $headerFontWeight;
   font-size: 12px;
   color: black;
-  letter-spacing: 0;
+  letter-spacing: 1px;
   &:hover {
     color: darken($linkColour, 20%);
   }
@@ -258,19 +267,40 @@ a[rel~="category"] {
 //==============================================================================
 
 .singleContainer {
-  max-width: 900px;
+  max-width: 1000px;
 }
 
+
 .singleContent.content {
-  @include column(10);
+  @include column(9);
   margin: 0 auto;
-  h1 {
-    text-align: left;
-    padding-left: 20px;
+  // background: $linkColour;
+  padding: 0;
+  .post {
+    background: $linkColour;
+    h1 {
+      text-align: left;
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-bottom: 0;
+      font-family: $headerFont;
+      font-weight: $headerFontWeight;
+    }
   }
-  .entry-meta {
-    padding-left: 20px;
-    font-family: $bodyFont;
+  .navigation {
+    background: $linkColour;
+  }
+}
+
+.entry-meta {
+  padding: 15px 20px;
+  font-family: $bodyFont;
+  p {
+    font-size: 12px;
+    font-style: italic;
+  }
+  a {
+    font-style: normal;
   }
 }
 
@@ -283,10 +313,56 @@ a[rel~="category"] {
   width: 100%;
 }
 
+.entry-utility {
+  padding: 0 20px;
+}
+
+#nav-below {
+  text-align: center;
+  padding: 20px 20px;
+  background: $linkColour;
+  p {
+    display: inline-block;
+    padding: 0 10px;  
+  }
+  p.nav-previous {
+    float: left;
+  }
+  p.nav-next {
+    float: right; 
+  }
+}
 
 .singleSidebar {
-  @include column(2);
+  @include column(3);
+  font-size: 12px;
 }
+
+ul.xoxo {
+  li.widget-container {
+    padding: 10px 0;
+    h3.widget-title {
+      padding: 5px 0;
+      font-family: $headerFont;
+      font-weight: $headerFontWeight;
+      font-size: 20px;
+    }
+  }
+}
+
+li.widget-container {
+  input[type="search"] {
+    padding: 10px;
+    border: 1px solid darken($linkColour, 20%);
+  }
+  input[type="submit"] {
+    padding: 10px;
+    font-family: $headerFont;
+    background: $linkColour;
+    border: none;
+  }
+}
+
 
 .navigation {
   clear: both; 
@@ -295,10 +371,41 @@ a[rel~="category"] {
   clear: both;
 }
 
+//==============================================================================
+// Home Page
+//==============================================================================
+
+
+
+//==============================================================================
+// About Page
+//==============================================================================
+
+.aboutContent {
+  max-width: 900px;
+  margin: 0 auto;
+  @include column(8);
+  @include push(2);
+  background: $linkColour;
+  padding: 0;
+  img {
+    width: 100%;
+  }
+}
+
+.aboutContent h1.entry-title {
+  text-align: left;
+  padding:20px 0;
+  padding-left: 20px;
+  font-family: $headerFont;
+  font-weight: $headerFontWeight;
+
+}
+
 
 
 /* =============================================================================
-                   Comment Styling
+                   Default Comment Styling
    ========================================================================== */
 
 #comments .navigation { padding:0 0 18px; }
@@ -424,6 +531,40 @@ p.form-allowed-tags, .nocomments { display:none; }
 }
 .comment-meta a:active, .comment-meta a:hover, .reply a:hover, a.comment-edit-link:hover { color:#ff4b33; }
 #respond p, #comments-list ul #respond { margin:0; }
+
+//==============================================================================
+// Custom Comment Styles
+//==============================================================================
+
+#comments {
+  padding: 20px 25px;
+  margin-top: 50px;
+}
+.comments-area {
+  background: $linkColour;
+}
+
+ol.comment-list {
+  list-style-type: none;
+}
+
+p.logged-in-as a[title="Log out of this account"] {
+  font-size: 12px;
+}
+
+#respond .form-submit input {
+  padding: 10px;
+  margin-top: 10px;
+  background: white;
+  // border: 1px solid lighten($fontColour, 30%);
+  border: none;
+  font-family: $headerFont;
+  font-weight: 700;
+}
+
+#respond textarea {
+  border: none;
+}
 
 /* =============================================================================
                    Footer

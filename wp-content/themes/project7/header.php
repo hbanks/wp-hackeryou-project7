@@ -20,11 +20,11 @@
 <body <?php body_class(); ?>>
 
 <header class="row">
-  <div class="container">
     <?php wp_nav_menu( array(
       'container' => false,
       'theme_locations' => 'primary'
     )); ?>
+  <div class="container">
     
     <h1>
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">

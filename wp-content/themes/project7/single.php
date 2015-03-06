@@ -10,7 +10,8 @@
           <h1 class="entry-title"><?php the_title(); ?></h1>
 
           <div class="entry-meta">
-            <?php hackeryou_posted_on(); ?>
+            <!-- <?php hackeryou_posted_on(); ?> -->
+            <p>Posted by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author_meta( 'display_name' ); ?> |</a> <?php echo get_the_date('M, d'); ?></p>
           </div><!-- .entry-meta -->
 
           <div class="entry-content">
@@ -27,7 +28,7 @@
           </div><!-- .entry-utility -->
         </div><!-- #post-## -->
 
-        <div id="nav-below" class="navigation">
+        <div id="nav-below" class="navigation clearfix">
           <p class="nav-previous"><?php previous_post_link('%link', '&larr; %title'); ?></p>
           <p class="nav-next"><?php next_post_link('%link', '%title &rarr;'); ?></p>
         </div><!-- #nav-below -->

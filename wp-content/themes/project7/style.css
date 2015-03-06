@@ -180,6 +180,10 @@ img.alignright {
 /* =============================================================================
                    Default Styling
    ========================================================================== */
+body, ul, h1, h2, h3, a {
+  margin: 0;
+  padding: 0; }
+
 body {
   color: #333; }
 
@@ -212,7 +216,7 @@ body {
 
 /* links */
 a {
-  color: #BA209B;
+  color: #444038;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -223,7 +227,7 @@ a.current-menu-item {
   color: #c4c0b7; }
 
 a:hover {
-  color: #D424B1; }
+  color: #c4c0b7; }
 
 h2 {
   font-family: 'Raleway', sans-serif;
@@ -232,7 +236,8 @@ h2 {
 /* paragraphs */
 p {
   line-height: 1.5;
-  font-family: 'Droid Serif', serif; }
+  font-family: 'Droid Serif', serif;
+  color: #444038; }
 
 /*blockquotes*/
 blockquote {
@@ -271,7 +276,8 @@ pre {
   border: 1px solid #ccc; }
 
 h1 {
-  text-align: center; }
+  text-align: center;
+  padding: 50px 0; }
 
 /* =============================================================================
                    Sidebar
@@ -300,7 +306,7 @@ ul.menu {
   padding: 10px;
   text-align: center;
   width: 100%;
-  border-bottom: 1px solid lightgrey; }
+  background: #f2f1ef; }
   ul.menu li {
     display: inline;
     margin-right: 10px; }
@@ -326,7 +332,7 @@ ul.menu li.current-menu-item a {
   font-family: 'Raleway', sans-serif;
   font-size: 12px;
   color: black;
-  letter-spacing: 0; }
+  letter-spacing: 1px; }
   .posts a:hover {
     color: #c4c0b7; }
 
@@ -347,21 +353,36 @@ a[rel~="category"] {
   font-weight: 100; }
 
 .singleContainer {
-  max-width: 900px; }
+  max-width: 1000px; }
 
 .singleContent.content {
   display: inline-block;
   float: left;
-  width: 83.33333%;
+  width: 75%;
   padding-left: 1.04167%;
   padding-right: 1.04167%;
-  margin: 0 auto; }
-  .singleContent.content h1 {
-    text-align: left;
-    padding-left: 20px; }
-  .singleContent.content .entry-meta {
-    padding-left: 20px;
-    font-family: 'Droid Serif', serif; }
+  margin: 0 auto;
+  padding: 0; }
+  .singleContent.content .post {
+    background: #f2f1ef; }
+    .singleContent.content .post h1 {
+      text-align: left;
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-bottom: 0;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100; }
+  .singleContent.content .navigation {
+    background: #f2f1ef; }
+
+.entry-meta {
+  padding: 15px 20px;
+  font-family: 'Droid Serif', serif; }
+  .entry-meta p {
+    font-size: 12px;
+    font-style: italic; }
+  .entry-meta a {
+    font-style: normal; }
 
 .entry-content p {
   padding: 0 25px; }
@@ -370,12 +391,45 @@ a[rel~="category"] {
   padding: 0;
   width: 100%; }
 
+.entry-utility {
+  padding: 0 20px; }
+
+#nav-below {
+  text-align: center;
+  padding: 20px 20px;
+  background: #f2f1ef; }
+  #nav-below p {
+    display: inline-block;
+    padding: 0 10px; }
+  #nav-below p.nav-previous {
+    float: left; }
+  #nav-below p.nav-next {
+    float: right; }
+
 .singleSidebar {
   display: inline-block;
   float: left;
-  width: 16.66667%;
+  width: 25%;
   padding-left: 1.04167%;
-  padding-right: 1.04167%; }
+  padding-right: 1.04167%;
+  font-size: 12px; }
+
+ul.xoxo li.widget-container {
+  padding: 10px 0; }
+  ul.xoxo li.widget-container h3.widget-title {
+    padding: 5px 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 20px; }
+
+li.widget-container input[type="search"] {
+  padding: 10px;
+  border: 1px solid #c4c0b7; }
+li.widget-container input[type="submit"] {
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+  background: #f2f1ef;
+  border: none; }
 
 .navigation {
   clear: both; }
@@ -383,8 +437,29 @@ a[rel~="category"] {
 .comments-area {
   clear: both; }
 
+.aboutContent {
+  max-width: 900px;
+  margin: 0 auto;
+  display: inline-block;
+  float: left;
+  width: 66.66667%;
+  padding-left: 1.04167%;
+  padding-right: 1.04167%;
+  margin-left: 16.66667%;
+  background: #f2f1ef;
+  padding: 0; }
+  .aboutContent img {
+    width: 100%; }
+
+.aboutContent h1.entry-title {
+  text-align: left;
+  padding: 20px 0;
+  padding-left: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100; }
+
 /* =============================================================================
-                   Comment Styling
+                   Default Comment Styling
    ========================================================================== */
 #comments .navigation {
   padding: 0 0 18px; }
@@ -554,6 +629,30 @@ p.form-allowed-tags, .nocomments {
 
 #respond p, #comments-list ul #respond {
   margin: 0; }
+
+#comments {
+  padding: 20px 25px;
+  margin-top: 50px; }
+
+.comments-area {
+  background: #f2f1ef; }
+
+ol.comment-list {
+  list-style-type: none; }
+
+p.logged-in-as a[title="Log out of this account"] {
+  font-size: 12px; }
+
+#respond .form-submit input {
+  padding: 10px;
+  margin-top: 10px;
+  background: white;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700; }
+
+#respond textarea {
+  border: none; }
 
 /* =============================================================================
                    Footer
