@@ -16,6 +16,7 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 		<div class="posts">
+
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="postThumbnailContent">
 					<?php the_post_thumbnail( 'medium'); ?>

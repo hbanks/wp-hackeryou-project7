@@ -437,6 +437,45 @@ li.widget-container input[type="submit"] {
 .comments-area {
   clear: both; }
 
+.homePage {
+  max-width: 800px; }
+  .homePage .post h1 {
+    text-align: left;
+    padding: 30px 10px;
+    padding-bottom: 0;
+    padding-left: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100; }
+
+.homePage .postContent {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  padding-left: 1.04167%;
+  padding-right: 1.04167%;
+  padding: 0; }
+  .homePage .postContent article {
+    background: #f2f1ef;
+    padding: 10px 0; }
+
+.main div#masonry {
+  display: flex;
+  flex-flow: column wrap; }
+
+.main div#masonry .postContent {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  padding-left: 1.04167%;
+  padding-right: 1.04167%;
+  margin-bottom: 20px; }
+
+a.readMore {
+  background: white;
+  padding: 10px;
+  display: inline-block;
+  text-align: center; }
+
 .aboutContent {
   max-width: 900px;
   margin: 0 auto;

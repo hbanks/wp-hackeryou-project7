@@ -375,6 +375,52 @@ li.widget-container {
 // Home Page
 //==============================================================================
 
+.homePage {
+  max-width: 800px;
+  // @include column(12);
+  .post {
+    // background: $linkColour;
+    // border: 1px solid black;
+    // margin: 5px;
+    // @include column(6);
+    h1 {
+      text-align: left;
+      padding: 30px 10px;
+      padding-bottom: 0;
+      padding-left: 20px;
+      font-family: $headerFont;
+      font-weight: $headerFontWeight;
+    }
+  }
+}
+
+.homePage .postContent {
+  @include column(6);
+  padding: 0;
+  // margin: ;
+  article {
+    background: $linkColour;
+    padding: 10px 0;
+  }
+}
+
+.main div#masonry {
+   display: flex;
+   flex-flow: column wrap;
+   // height: 2000px;
+}
+
+.main div#masonry .postContent {
+ @include column(6);
+ margin-bottom: 20px;
+}
+
+a.readMore {
+  background: white;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+}
 
 
 //==============================================================================
