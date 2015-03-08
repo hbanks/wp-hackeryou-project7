@@ -231,7 +231,8 @@ a:hover {
 
 h2 {
   font-family: 'Raleway', sans-serif;
-  font-weight: 100; }
+  font-weight: 100;
+  text-transform: uppercase; }
 
 /* paragraphs */
 p {
@@ -371,7 +372,8 @@ a[rel~="category"] {
       padding-left: 20px;
       padding-bottom: 0;
       font-family: 'Raleway', sans-serif;
-      font-weight: 100; }
+      font-weight: 100;
+      text-transform: uppercase; }
   .singleContent.content .navigation {
     background: #f2f1ef; }
 
@@ -445,7 +447,8 @@ li.widget-container input[type="submit"] {
     padding-bottom: 0;
     padding-left: 20px;
     font-family: 'Raleway', sans-serif;
-    font-weight: 100; }
+    font-weight: 100;
+    text-transform: uppercase; }
 
 .homePage .postContent {
   display: inline-block;
@@ -495,7 +498,29 @@ a.readMore {
   padding: 20px 0;
   padding-left: 20px;
   font-family: 'Raleway', sans-serif;
-  font-weight: 100; }
+  font-weight: 100;
+  text-transform: uppercase; }
+
+.contactContent {
+  max-width: 900px;
+  margin: 0 auto;
+  display: inline-block;
+  float: left;
+  width: 66.66667%;
+  padding-left: 1.04167%;
+  padding-right: 1.04167%;
+  margin-left: 16.66667%;
+  background: #f2f1ef;
+  padding: 0; }
+
+.contactContent .entry-content h2 {
+  padding: 20px 20px;
+  text-transform: uppercase; }
+.contactContent .entry-content form {
+  margin-top: 50px; }
+
+.entry-content img.ajax-loader {
+  width: auto; }
 
 /* =============================================================================
                    Default Comment Styling

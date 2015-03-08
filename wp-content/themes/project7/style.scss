@@ -114,6 +114,7 @@ a:hover {
 h2 {
   font-family: $headerFont;
   font-weight: $headerFontWeight;
+  text-transform: uppercase;
 }
 
 
@@ -285,6 +286,7 @@ a[rel~="category"] {
       padding-bottom: 0;
       font-family: $headerFont;
       font-weight: $headerFontWeight;
+      text-transform: uppercase;
     }
   }
   .navigation {
@@ -390,6 +392,7 @@ li.widget-container {
       padding-left: 20px;
       font-family: $headerFont;
       font-weight: $headerFontWeight;
+      text-transform: uppercase;
     }
   }
 }
@@ -445,7 +448,36 @@ a.readMore {
   padding-left: 20px;
   font-family: $headerFont;
   font-weight: $headerFontWeight;
+  text-transform: uppercase;
 
+}
+
+//==============================================================================
+// Contact Page
+//==============================================================================
+
+.contactContent {
+  max-width: 900px;
+  margin: 0 auto;
+  @include column(8);
+  @include push(2);
+  background: $linkColour;
+  padding: 0;
+}
+
+.contactContent .entry-content {
+  h2 {
+    padding: 20px 20px;
+    text-transform: uppercase;
+  }
+  form {
+    margin-top: 50px;
+  }
+
+}
+
+.entry-content img.ajax-loader {
+  width: auto;
 }
 
 
