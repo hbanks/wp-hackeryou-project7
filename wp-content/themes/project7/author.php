@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="main row">
-  <div class="container">
-    <div class="content">
+<div class="main">
+  <div class="container archiveContainer row">
+    <div class="content archiveContent">
 
       <?php
       	/* Queue the first post, that way we know who
@@ -34,8 +34,10 @@
       		get_template_part('loop', 'author');
       	?>
     </div> <!-- /.content -->
-
-    <?php get_sidebar(); ?>
+    
+    <div class="singleSidebar">
+      <?php get_sidebar(); ?>
+    </div>
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->

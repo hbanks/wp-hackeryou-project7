@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="main">
-  <div class="container">
-    <div class="content">
+<div class="main row">
+  <div class="container archiveContainer">
+    <div class="content archiveContent">
 
       <h1>Category Archives: <?php single_cat_title(); ?></h1>
     	<?php
@@ -14,7 +14,9 @@
 
     </div> <!-- /.content -->
 
-    <?php get_sidebar(); ?>
+    <div class="singleSidebar">
+      <?php get_sidebar(); ?>
+    </div>
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->

@@ -1,14 +1,16 @@
 <?php get_header(); ?>
 
-<div class="main">
-  <div class="container">
+<div class="main row">
+  <div class="container archiveContainer">
 
-    <div class="content">
+    <div class="content archiveContent">
       <h1>Tag Archives: <?php single_tag_title(); ?></h1>
       <?php get_template_part( 'loop', 'tag' ); ?>
     </div> <!-- /.content -->
 
-    <?php get_sidebar(); ?>
+   <div class="singleSidebar">
+     <?php get_sidebar(); ?>
+   </div>
 
   </div><!-- /.container -->
 </div><!-- /.main -->
