@@ -1,6 +1,10 @@
 <footer class="row">
-  <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+  <div class="container footerContent">
+    <p>&copy; Heather Banks <?php echo date('Y'); ?></p>
+  </div>
+
+  <div class="footerWidget">
+  <?php dynamic_sidebar('footer-widget-area'); ?>
   </div>
 </footer>
 

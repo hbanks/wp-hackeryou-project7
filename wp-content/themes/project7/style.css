@@ -193,6 +193,7 @@ body {
 
 .content {
   float: left;
+  margin-bottom: 10px;
   display: inline-block;
   float: left;
   width: 100%;
@@ -477,7 +478,8 @@ a.readMore {
   background: white;
   padding: 10px;
   display: inline-block;
-  text-align: center; }
+  text-align: center;
+  margin-top: 15px; }
 
 .aboutContent {
   max-width: 900px;
@@ -501,26 +503,58 @@ a.readMore {
   font-weight: 100;
   text-transform: uppercase; }
 
+.contactContainer {
+  max-width: 1200px; }
+
 .contactContent {
-  max-width: 900px;
-  margin: 0 auto;
   display: inline-block;
   float: left;
-  width: 66.66667%;
+  width: 83.33333%;
   padding-left: 1.04167%;
   padding-right: 1.04167%;
-  margin-left: 16.66667%;
+  margin-left: 8.33333%;
   background: #f2f1ef;
-  padding: 0; }
+  padding: 35px; }
+  .contactContent .post-32 {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    padding-left: 1.04167%;
+    padding-right: 1.04167%; }
 
 .contactContent .entry-content h2 {
-  padding: 20px 20px;
+  padding: 20px 0;
   text-transform: uppercase; }
-.contactContent .entry-content form {
-  margin-top: 50px; }
+.contactContent .entry-content p {
+  padding: 0;
+  font-size: 14px; }
+
+.secondarySidebar {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  padding-left: 1.04167%;
+  padding-right: 1.04167%; }
+
+form p {
+  font-family: 'Raleway', sans-serif;
+  margin-top: 15px; }
+form input[type='text'], form input[type='email'], form textarea[name='your-message'] {
+  border: none;
+  padding: 10px;
+  width: 100%; }
+
+.secondarySidebar li.widget-container form input[type="submit"] {
+  background: #b9b3a9;
+  width: 100%; }
+  .secondarySidebar li.widget-container form input[type="submit"]:hover {
+    background: #d0ccc5; }
 
 .entry-content img.ajax-loader {
   width: auto; }
+
+li#text-2 {
+  list-style-type: none; }
 
 /* =============================================================================
                    Default Comment Styling
@@ -722,4 +756,32 @@ p.logged-in-as a[title="Log out of this account"] {
                    Footer
    ========================================================================== */
 footer {
-  clear: both; }
+  clear: both;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  display: block; }
+  footer p {
+    font-family: 'Raleway', sans-serif;
+    margin: 0; }
+
+.footerContent {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  padding-left: 1.04167%;
+  padding-right: 1.04167%;
+  text-align: left; }
+
+.footerWidget {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  padding-left: 1.04167%;
+  padding-right: 1.04167%;
+  list-style-type: none;
+  text-align: right; }
+  .footerWidget a {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 20px; }

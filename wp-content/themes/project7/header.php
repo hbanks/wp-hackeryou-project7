@@ -13,6 +13,9 @@
   <?php // Load Fonts ?>
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Raleway:700,100' rel='stylesheet' type='text/css'>
 
+  <?php //load Font Awesome ?>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
   <?php wp_head(); ?>
 </head>
 

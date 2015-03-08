@@ -78,8 +78,7 @@ body {
 
 .content {
   float:left;
-  // width:65%;
-  // margin-right: 5%;
+  margin-bottom: 10px;
   @include column(12);
 }
 
@@ -379,12 +378,7 @@ li.widget-container {
 
 .homePage {
   max-width: 800px;
-  // @include column(12);
   .post {
-    // background: $linkColour;
-    // border: 1px solid black;
-    // margin: 5px;
-    // @include column(6);
     h1 {
       text-align: left;
       padding: 30px 10px;
@@ -423,6 +417,7 @@ a.readMore {
   padding: 10px;
   display: inline-block;
   text-align: center;
+  margin-top: 15px;
 }
 
 
@@ -456,28 +451,62 @@ a.readMore {
 // Contact Page
 //==============================================================================
 
+.contactContainer {
+  max-width: 1200px;
+}
+
 .contactContent {
-  max-width: 900px;
-  margin: 0 auto;
-  @include column(8);
-  @include push(2);
+  // max-width: 900px;
+  @include column(10);
+  @include push(1);
   background: $linkColour;
-  padding: 0;
+  padding: 35px;
+  .post-32 {
+    @include column(6)
+  }
 }
 
 .contactContent .entry-content {
   h2 {
-    padding: 20px 20px;
+    padding: 20px 0;
     text-transform: uppercase;
   }
-  form {
-    margin-top: 50px;
+  p {
+    padding: 0;
+    font-size: 14px;
   }
+}
 
+.secondarySidebar {
+  @include column(6);
+}
+
+form {
+  p {
+    font-family: $headerFont;
+    margin-top: 15px;
+  }
+  input[type='text'], input[type='email'], textarea[name='your-message'] {
+    border: none;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+.secondarySidebar li.widget-container form input[type="submit"] {
+  background: darken($linkColour, 25%);
+  width: 100%;
+  &:hover {
+    background: darken($linkColour, 15%);
+  }
 }
 
 .entry-content img.ajax-loader {
   width: auto;
+}
+
+li#text-2 {
+  list-style-type: none;
 }
 
 
@@ -650,4 +679,28 @@ p.logged-in-as a[title="Log out of this account"] {
 
 footer {
   clear:both;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  display: block;
+  p {
+    font-family: $headerFont;
+    margin: 0;
+  }
+}
+
+.footerContent {
+  @include column(6);
+  text-align: left;
+}
+
+.footerWidget {
+  @include column(6);
+  list-style-type: none;
+  text-align: right;
+  a { 
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 20px;
+  }
 }

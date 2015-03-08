@@ -4,7 +4,7 @@
 <?php get_header(); ?>
 
 <div class="main rows">
-  <div class="container">
+  <div class="container contactContainer">
 
     <div class="content">
         <div class="content contactContent">
@@ -24,6 +24,11 @@
 
         </div> <!--/.content -->
 
+        <div class="secondarySidebar">
+        <?php dynamic_sidebar('secondary-widget-area'); ?>
+        </div>
+
+	  </div> <!-- /.content -->
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 
