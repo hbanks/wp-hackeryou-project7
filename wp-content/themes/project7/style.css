@@ -494,6 +494,12 @@ ul.menu {
 ul.menu li.current-menu-item a {
   color: #c4c0b7; }
 
+.navIcon {
+  display: none; }
+
+ul.menu.open {
+  display: block; }
+
 .posts {
   display: inline-block;
   float: left;
@@ -652,7 +658,7 @@ a[rel~="tag"] {
 a.readMore {
   background: white;
   padding: 10px;
-  display: inline-block;
+  display: block;
   text-align: center;
   margin-top: 15px; }
 
@@ -810,3 +816,101 @@ footer {
     display: inline-block;
     padding: 0 10px;
     font-size: 20px; }
+
+@media (max-width: 1000px) {
+  .contactContent .post-32 {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    padding-left: 1.04167%;
+    padding-right: 1.04167%; }
+  .secondarySidebar {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    padding-left: 1.04167%;
+    padding-right: 1.04167%; } }
+
+@media (max-width: 700px) {
+  h1.entry-title {
+    font-size: 25px; }
+  .posts {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    padding-left: 1.04167%;
+    padding-right: 1.04167%; } }
+
+@media (max-width: 520px) {
+  .main div#masonry {
+    display: block; }
+  div.main div#masonry .postContent {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    padding-left: 1.04167%;
+    padding-right: 1.04167%;
+    margin-bottom: 20px; }
+  .aboutContent {
+    display: inline-block;
+    float: left;
+    width: 83.33333%;
+    padding-left: 1.04167%;
+    padding-right: 1.04167%;
+    margin-left: 8.33333%; }
+  .content.contactContent {
+    display: inline-block;
+    float: left;
+    width: 91.66667%;
+    padding-left: 1.04167%;
+    padding-right: 1.04167%;
+    margin-left: 4.16667%;
+    padding: 10px; }
+    .content.contactContent div.entry-content p {
+      width: 100%;
+      font-size: 13px; }
+      .content.contactContent div.entry-content p a {
+        font-size: 10px; } }
+
+@media (max-width: 480px) {
+  nav.main {
+    background: rgba(242, 241, 239, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0; }
+  ul.menu {
+    display: none;
+    background: rgba(242, 241, 239, 0.8); }
+    ul.menu li {
+      display: block;
+      width: 100%;
+      padding: 10px 0; }
+  a.navIcon {
+    display: block;
+    padding: 10px; }
+  .posts {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    padding-left: 1.04167%;
+    padding-right: 1.04167%; } }
+
+@media (max-width: 375px) {
+  .footerContent {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    padding-left: 1.04167%;
+    padding-right: 1.04167%;
+    float: none;
+    text-align: center; }
+  .footerWidget {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    padding-left: 1.04167%;
+    padding-right: 1.04167%;
+    padding: 10px 0;
+    float: none;
+    text-align: center; } }

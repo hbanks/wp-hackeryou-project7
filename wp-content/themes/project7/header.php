@@ -26,10 +26,13 @@
 <body <?php body_class(); ?>>
 
 <header class="row">
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_locations' => 'primary'
-    )); ?>
+    <nav class="main">
+      <a href="#" class="navIcon"><i class="fa fa-bars navIcon"></i></a>
+      <?php wp_nav_menu( array(
+        'container' => false,
+        'theme_locations' => 'primary'
+      )); ?>
+    </nav>
   <div class="container">
     
     <h1 class="blogTitle">

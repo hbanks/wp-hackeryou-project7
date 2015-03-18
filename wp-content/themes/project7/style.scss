@@ -213,6 +213,14 @@ h1.blogTitle {
     color: darken($linkColour, 20%);
   }
 
+  .navIcon {
+    display: none;
+  }
+
+  ul.menu.open {
+    display: block;
+  }
+
 //==============================================================================
 // Post Styles
 //==============================================================================
@@ -411,7 +419,7 @@ a[rel~="tag"] {
 a.readMore {
   background: white;
   padding: 10px;
-  display: inline-block;
+  display: block;
   text-align: center;
   margin-top: 15px;
 }
@@ -596,5 +604,98 @@ footer {
     display: inline-block;
     padding: 0 10px;
     font-size: 20px;
+  }
+}
+
+//=============================================================
+// Media Queries
+//=============================================================
+
+@media (max-width: 1000px) {
+  .contactContent .post-32 {
+    @include column(12);
+  }
+  .secondarySidebar {
+    @include column(12);
+  }
+}
+
+@media (max-width: 700px) {
+  h1.entry-title {
+    font-size: 25px;
+  }
+  .posts {
+    @include column(6);
+  }
+}
+
+@media (max-width: 520px) {
+  .main div#masonry {
+    display: block;
+  }
+  div.main div#masonry .postContent {
+   @include column(12);
+   margin-bottom: 20px;
+  }
+
+  .aboutContent {
+    @include column(10);
+    @include push(1);
+  }
+
+  .content.contactContent {
+    @include column(11);
+    @include push(0.5);
+    padding: 10px;
+    div.entry-content p {
+      width: 100%;
+      font-size: 13px;
+      a {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  nav.main {
+    background: rgba(242, 241, 239, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+  }
+  ul.menu {
+    display: none;
+    background: rgba(242, 241, 239, 0.8);
+    li {
+      display: block; 
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
+  a.navIcon {
+    display: block;
+    padding: 10px;
+    // position: fixed;
+  }
+
+  .posts {
+    @include column(12);
+  }
+}
+
+@media (max-width: 375px) {
+  .footerContent {
+    @include column(12);
+    float: none;
+    text-align: center;
+  }
+  .footerWidget {
+    @include column(12);
+    padding: 10px 0;
+    float: none;
+    text-align: center;
   }
 }

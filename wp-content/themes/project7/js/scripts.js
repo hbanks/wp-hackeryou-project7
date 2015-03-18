@@ -1,7 +1,12 @@
 $(function(){
 	//your jQuery here
 	
-	// find the height of the first 3
+	$('a.navIcon').on('click', function (e){
+		e.preventDefault();
+		$('ul.menu').toggleClass('open');
+	});
+
+
 
 });
 
